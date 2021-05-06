@@ -13,7 +13,7 @@ import argparse # to get arguments
 
 # # Arguments & Setting Defaults
 
-# In[14]:
+# In[2]:
 
 
 parser = argparse.ArgumentParser()
@@ -75,7 +75,7 @@ print("--- %s seconds ---\n\n" % (time.time() - start_time))
 
 # # Second Case
 
-# In[13]:
+# In[7]:
 
 
 def generate_dictionary():
@@ -128,6 +128,7 @@ def third_case(password_list_with_constant_salt):
 
 password_list = generate_password_list_raw()
 password_list_with_constant_salt = list(map(hash_with_constant_salt, password_list))
+print("Case3:\n")
 start_time = time.time()
 third_case(password_list_with_constant_salt)
 print("--- %s seconds ---\n\n" % (time.time() - start_time))
