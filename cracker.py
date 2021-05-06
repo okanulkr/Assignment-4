@@ -13,14 +13,14 @@ import argparse # to get arguments
 
 # # Arguments & Setting Defaults
 
-# In[2]:
+# In[14]:
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f")
 parser.add_argument("-password", default="303030")
-parser.add_argument("-dictionary_size", default=333333)
-parser.add_argument("-pass_list_size", default=4000)
+parser.add_argument("-dictionary_size", default=333333, type=int)
+parser.add_argument("-pass_list_size", default=4000, type=int)
 parser.add_argument("-i", default="moon.jpg")
 args = parser.parse_args()
 
@@ -75,7 +75,7 @@ print("--- %s seconds ---\n\n" % (time.time() - start_time))
 
 # # Second Case
 
-# In[7]:
+# In[13]:
 
 
 def generate_dictionary():
